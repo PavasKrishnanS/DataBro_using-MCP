@@ -40,6 +40,8 @@ To run this project, you need Python and the required libraries.
 
 ---
 
+
+
 ## 🚀 Usage
 
 The server starts by running the main Python file. It will then listen for tool calls (e.g., from an integrating AI model like Claude) to execute the defined analysis functions.
@@ -48,14 +50,19 @@ The server starts by running the main Python file. It will then listen for tool 
 
 ```bash
 python data_server.py 
-# Use the actual name of your script file if it's different.
+
+🧱  Core Technology Stack
+FastMCP — framework for creating the tool server and exposing functions via the Model Context Protocol (MCP).
+Model Context Protocol (MCP) — standard used by tools and AI clients (e.g., Claude) to communicate with the server.
+Claude Desktop Context — developed and tested within the Claude desktop environment for seamless tool integration.
+Pandas — data manipulation, cleaning, and summarization.
+Matplotlib — data visualization engine for chart generation.
+Python Standard Library:
+base64 — encodes generated charts into Base64 strings for transport and embedding.
+io (StringIO, BytesIO) — handles in-memory CSV parsing and image buffering without writing to disk.k.
 
 
-## 🛠️ Core Technology Stack
 
-* **FastMCP:** Framework for creating the tool server and exposing functions via the Model Context Protocol (MCP).
-* **Context:** Developed and tested within the **Claude desktop environment** for seamless tool integration.
-* **Pandas:** Data manipulation, cleaning, and summarization.
-* **Matplotlib:** Data visualization engine.
-* **Python's `base64` and `io` modules:** Used for encoding the resulting images.
+
+
 
